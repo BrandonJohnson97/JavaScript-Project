@@ -18,15 +18,34 @@
     <form name="quiz" id="quiz"></form>
     <div class="questions" style="text-align:center">
         <!--Loops though questions and add using js-->
-        <h2 id="questioncounter">Question 3</h2>
-            <p class="questioninfo">Question content</p>
-            <p class="answer">Answer A</p>
-            <p class="answer">Answer B</p>
-            <p class="answer">Answer C</p>
-            <p class="answer">Answer D</p>
-            <p class="center"><button onclick="window.location.href='triviaquestionpage4.html';">NEXT QUESTION</button></p>
-            <!-- <button class="nextq">Next Question</button> -->
-    </div>
+        <div class="questions" style="text-align:center">
+            <!--Loops though questions and add using js-->
+            <h2 id="questioncounter">Question 3</h2>
+                <p class="questioninfo">Question content</p>
+                
+                <div>
+                    <p class="answerA">Answer A</p> 
+                    <input type="checkbox">
+                </div>
+    
+                <div>
+                    <p class="answerB">Answer B</p> 
+                    <input type="checkbox">
+                </div>
+    
+                <div>
+                    <p class="answerC">Answer C</p> 
+                    <input type="checkbox">
+                </div>
+    
+                <div>
+                    <p class="answerD">Answer D</p> 
+                    <input type="checkbox">
+                </div>
+                
+                <p class="center"><button onclick="window.location.href='triviaquestionpage2.html';">NEXT QUESTION</button></p>
+                <!-- <button class="nextq">Next Question</button> -->
+        </div>
 <body>
     <div class="container" style="text-align:center">
         <button onclick="window.location.href='displayscorepage.html';">Submit Quiz</button>
