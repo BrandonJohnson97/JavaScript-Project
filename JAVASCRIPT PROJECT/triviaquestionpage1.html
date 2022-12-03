@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Questions</title>
     <link rel="stylesheet" type="text/css" href="trivia.css">
+    <script src="questions.js"></script>
+    <script src="trivia.js"></script>
 </head>
 <body>
     <header>
@@ -18,33 +20,32 @@
     <form name="quiz" id="quiz"></form>
     <div class="questions" style="text-align:center">
         <!--Loops though questions and add using js-->
-        <h2 id="questioncounter">Question 1</h2>
-            <p class="questioninfo">Question content</p>
+        <h2 id="questioncounter">HIDDEN</h2>
+            <p class="questionContent" id="questioninfo">HIDDEN</p>
             
             <div>
-                <p class="answerA">Answer A</p> 
-                <input type="checkbox">
+                <button class="answers" id="a">HIDDEN</button>
+                <!--<input type="checkbox">-->
             </div>
 
             <div>
-                <p class="answerB">Answer B</p> 
-                <input type="checkbox">
+                <button class="answers" id="b">HIDDEN</button>
+                <!--<input type="checkbox">-->
             </div>
 
             <div>
-                <p class="answerC">Answer C</p> 
-                <input type="checkbox">
+                <button class="answers" id="c">HIDDEN</button>
+                <!--<input type="checkbox">-->
             </div>
 
             <div>
-                <p class="answerD">Answer D</p> 
-                <input type="checkbox">
+                <button class="answers" id="d">HIDDEN</button>
+                <!--<input type="checkbox">-->
             </div>
 
-            <p class="center"><button onclick="window.location.href='triviaquestionpage2.html';">NEXT QUESTION</button></p>
+            <p id="nextquestion" class="center"><button >NEXT QUESTION</button></p>
             <!-- <button class="nextq">Next Question</button> -->
     </div>
-<body>
     <div class="container" style="text-align:center">
         <button onclick="window.location.href='displayscorepage.html';">Submit Quiz</button>
     </div>

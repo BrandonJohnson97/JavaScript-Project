@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Trivia Quiz</title>
     <link rel="stylesheet" type="text/css" href="trivia.css">
+    <script src="questions.js"></script>
+    <script src="trivia.js"></script>
 </head>
 <body>
     <main>
@@ -12,9 +14,11 @@
         <h1>Welcome to the Trivia Quiz!</h1>
     </div>
     <div class="users-name" style="text-align:center">
+        <form>
         <label for="name">Enter Name:</label>
-        <input type="text" id="name">
-        <input type="button" id="enter" value="Enter">
+        <input type="text" id="usersname"/>
+        <input type="submit" id="enter" value="Enter">
+        </form>
     </div>
     
     <div>
@@ -25,7 +29,7 @@
     </div>
     
     <h2>To Start Click Button Below</h2>
-        <p class="center"><button onclick="window.location.href='triviaquestionpage1.html';">START</button></p>
+        <p class="center"><input type = button id="start" value="START"></p>
 </main>
 </body>
 </html>
