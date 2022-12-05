@@ -7,7 +7,7 @@ const Questions = [
         c: "Sugarhill Records",
         d: "Def Jam Records"
       },
-      correctAnswer: "Death Row Records"
+      correctAnswer: "Bad Boy Records"
     },
     {
         question: "Who is the lead singer of Green Day",
