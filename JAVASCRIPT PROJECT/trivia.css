@@ -39,3 +39,6 @@ p {
 label {
     color: red;
 }
+.showresult {
+    display: none;
+}
