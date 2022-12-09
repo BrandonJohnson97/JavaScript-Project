@@ -1,5 +1,7 @@
 const $ = selector => document.querySelector(selector);
 
+var success = new Audio("successsound.wav");
+var fail = new Audio("errorsound.wav");
 // Keep track of the current question number
 let questionCount = 1;
 
@@ -10,23 +12,15 @@ var score = 0;
 
 // Variable to store the timeout for when an answer is clicked
 let timeout;
-
 window.onload = () => {
     // Start the quiz by loading the first question
+    Questions.sort(() => Math.random() - 0.5);
     nextQuestion();
-}
-
-// Function to start the quiz by redirecting the user to the first question page
-const startQuiz = () =>{
-    // Save the user's name to local storage
-    window.localStorage.setItem("usernameUser", $("#usersname").value);
-
-    // Redirect the user to the first question page
-    window.location.href='triviaquestionpage1.html';
 }
 
 // Function to load the next question
 const nextQuestion = () =>{
+
     // Update the question counter with the current question number
     document.getElementById("questioncounter").textContent = `Question ${questionCount} / ${Questions.length}`;
 
@@ -58,7 +52,7 @@ const validateAnswers = evt =>{
 
             // Increment the user's score
             score += 1
-
+            success.play();
             // Set a timeout to move to the next question after 3 seconds
             timeout = setTimeout(() =>{
                 // Reset the button colors
@@ -70,7 +64,7 @@ const validateAnswers = evt =>{
         } else{
             // If the answer is incorrect, update the button's color to red
             document.getElementById(clicked).style.backgroundColor = "#ff0000"
-
+            fail.play();
             // Set a timeout to change the button color and move to the next question
             timeout = setTimeout(() => {
                 buttonColor();
